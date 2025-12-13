@@ -48,13 +48,12 @@ query_engine = index.as_query_engine()
 def ask(message: str, history: list[tuple[str, str]]):
     question = message.strip()
     if not question:
-        return "Please enter a question.", history
+        return "Please enter a question."
 
     resp = query_engine.query(question)
     answer = str(resp)
-    history = history + [(question, answer)]
-    # return new user input (for textbox) and updated history
-    return "", history
+    return answer
+
 
 
 demo = gr.ChatInterface(
