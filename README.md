@@ -48,14 +48,17 @@ At a high level, the project combines three layers:
 
 ---
 ## Repository Structure
+
+```text
 .
-├── app.py # Main Gradio + LlamaIndex + Groq application
-├── requirements.txt # Python dependencies
-├── storage/ # Persisted LlamaIndex artifacts (vector store, docstore, index store)
-├── .gitattributes # LFS/Xet config created during deployment
-├── .gitignore # Ignore raw data, env files, and virtualenv
-├── README.md # Project description (this file)
-└── LICENSE # MIT license
+├── app.py                  # Main Gradio + LlamaIndex + Groq application
+├── requirements.txt        # Python dependencies
+├── storage/                # Persisted LlamaIndex artifacts (vector store, docstore, index store)
+├── .gitattributes          # LFS/Xet config created during deployment
+├── .gitignore              # Ignore raw data, env files, and virtualenv
+├── README.md               # Project description (this file)
+└── LICENSE                 # MIT license
+
 
 > Note: The original exam PDFs and PPTX files are **not** included in this repository to keep it lightweight and to respect content ownership. The `storage/` index encodes those materials for retrieval without distributing the raw documents. [web:1222][web:1228]
 
