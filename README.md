@@ -47,7 +47,6 @@ At a high level, the project combines three layers:
 - **Deployment:** Hugging Face Spaces (CPU runtime) with persisted storage. [web:1092]
 
 ---
-
 ## Repository Structure
 .
 ├── app.py # Main Gradio + LlamaIndex + Groq application
