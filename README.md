@@ -49,4 +49,54 @@ At a high level, the project combines three layers:
 ---
 
 ## Repository Structure
+.
+├── app.py # Main Gradio + LlamaIndex + Groq application
+├── requirements.txt # Python dependencies
+├── storage/ # Persisted LlamaIndex artifacts (vector store, docstore, index store)
+├── .gitattributes # LFS/Xet config created during deployment
+├── .gitignore # Ignore raw data, env files, and virtualenv
+├── README.md # Project description (this file)
+└── LICENSE # MIT license
+
+> Note: The original exam PDFs and PPTX files are **not** included in this repository to keep it lightweight and to respect content ownership. The `storage/` index encodes those materials for retrieval without distributing the raw documents. [web:1222][web:1228]
+
+---
+
+## Running Locally
+
+1. **Clone the repo and create a virtual environment:**
+
+git clone https://github.com/sid-42-d/Anatomy-Physiology-Exam-Bot-Deployed-using-Hugging-Face-.git
+cd Anatomy-Physiology-Exam-Bot-Deployed-using-Hugging-Face-
+python -m venv venv
+source venv/bin/activate # On Windows: venv\Scripts\activate
+
+
+2. **Install dependencies:**
+
+pip install -r requirements.txt
+
+
+3. **Set environment variables:**
+
+Create a `.env` file with:
+
+GROQ_API_KEY=your_groq_api_key_here
+
+
+4. **Run the app:**
+
+python app.py
+
+
+Then open `http://localhost:7860` in your browser.
+
+---
+
+## Lessons Learned
+
+- Handling “binary file” push rejections on Hugging Face and GitHub by separating raw `Data/` from the persisted `storage/` index. [web:1122]  
+- Using access tokens instead of passwords for pushing to Hugging Face and GitHub. [web:1082]  
+- Debugging Gradio `ChatInterface` return types to avoid `AttributeError: 'tuple' object has no attribute 'get'`. [web:1202]  
+- Designing a small, focused RAG system tailored to a specific exam domain (anatomy & physiology) rather than generic web search. [web:1231]
 
