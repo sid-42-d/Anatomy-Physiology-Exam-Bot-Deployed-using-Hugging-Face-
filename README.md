@@ -63,7 +63,7 @@ At a high level, the project combines three layers:
 > Note: The original exam PDFs and PPTX files are **not** included in this repository to keep it lightweight and to respect content ownership. The `storage/` index encodes those materials for retrieval without distributing the raw documents. [web:1222][web:1228]
 
 ---
-
+---
 ## Running Locally
 
 1. **Clone the repo and create a virtual environment:**
@@ -73,10 +73,12 @@ cd Anatomy-Physiology-Exam-Bot-Deployed-using-Hugging-Face-
 python -m venv venv
 source venv/bin/activate # On Windows: venv\Scripts\activate
 
+---
 
 2. **Install dependencies:**
 
 pip install -r requirements.txt
+---
 
 
 3. **Set environment variables:**
@@ -84,6 +86,7 @@ pip install -r requirements.txt
 Create a `.env` file with:
 
 GROQ_API_KEY=your_groq_api_key_here
+---
 
 
 4. **Run the app:**
